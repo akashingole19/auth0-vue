@@ -173,7 +173,7 @@ export class Auth0Plugin implements Auth0VueClient {
 
         return result;
       } else {
-        await this.checkSession();
+        await this.checkSession(this.clientOptions);
       }
     } catch (e) {
       // __checkSession should never throw an exception as it will fail installing the plugin.
